@@ -54,7 +54,7 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256("0x000000b4fc79ebc70e8dd675a14f98e611d9dab4ac03c271283d2472e7d372fb"));
+    (0, uint256("0x000000189df7ebf3d3eeab60c75982b439d4ed4bd53b4528da00412db1619263"));
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
@@ -121,7 +121,7 @@ public:
 
          */
 
-        const char* pszTimestamp = "Don't work for weekends, work for our goals.";
+        const char* pszTimestamp = "Test";
         CMutableTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -132,13 +132,13 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime = 1541974692;
+        genesis.nTime = 1542146482;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 461651;
+        genesis.nNonce = 1886911;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x000000b4fc79ebc70e8dd675a14f98e611d9dab4ac03c271283d2472e7d372fb"));
-        assert(genesis.hashMerkleRoot == uint256("0xf5239467dd2a9dd0fce7a3babc03c7985eab2229c62e3d5670375f305753c9cc"));
+        assert(hashGenesisBlock == uint256("0x000000189df7ebf3d3eeab60c75982b439d4ed4bd53b4528da00412db1619263"));
+        assert(genesis.hashMerkleRoot == uint256("0x0c37db234d8c95a0d08c21d41bb94fd3b53176fd681132825213735fcd5fc397"));
 
         // DNS Seeding
         //vSeeds.push_back(CDNSSeedData("", ""));
