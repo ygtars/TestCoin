@@ -1,0 +1,11 @@
+[Protocol]
+exec=test-qt '%u'
+protocol=test
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false

@@ -1,0 +1,26 @@
+# /etc/conf.d/testd: config file for /etc/init.d/testd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/test/test.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/testd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/testd.pid"
+
+# Where to write testd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/testd"
+
+# User and group to own testd process
+#BITCOIND_USER="test"
+#BITCOIND_GROUP="test"
+
+# Path to testd executable
+#BITCOIND_BIN="/usr/bin/testd"
+
+# Nice value to run testd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""
