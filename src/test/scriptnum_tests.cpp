@@ -1,10 +1,9 @@
 // Copyright (c) 2012-2014 The Bitcoin Core developers
-// Copyright (c) 2017 The test developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "libzerocoin/bignum.h"
 #include "script/script.h"
+#include "bignum.h"
 #include <boost/test/unit_test.hpp>
 #include <limits.h>
 #include <stdint.h>
@@ -143,7 +142,7 @@ static void RunCreate(const long& num)
 {
     CheckCreateInt(num);
     CScriptNum scriptnum(num);
-    if (scriptnum.getvch().size() <= CScriptNum::nDefaultMaxNumSize)
+    if (scriptnum.getvch().size() <= CScriptNum::nMaxNumSize)
         CheckCreateVch(num);
     else
     {

@@ -8,8 +8,8 @@
 # Does the following:
 #   a) creates 3 nodes, with an empty chain (no blocks).
 #   b) node0 mines a block
-#   c) node1 mines 32 blocks, so now node 0 has 60001tst, node 1 has 4250tst, node2 has none.
-#   d) node0 sends 601 tst to node2, in two transactions (301 tst, then 300 tst).
+#   c) node1 mines 32 blocks, so now node 0 has 500000KYD, node 1 has 4250KYD, node2 has none.
+#   d) node0 sends 601 KYD to node2, in two transactions (301 KYD, then 300 KYD).
 #   e) node0 mines a block, collects the fee on the second transaction
 #   f) node1 mines 16 blocks, to mature node0's just-mined block
 #   g) check that node0 has 100-21, node2 has 21
@@ -45,7 +45,7 @@ class WalletTest (BitcoinTestFramework):
         self.nodes[1].setgenerate(True, 32)
         self.sync_all()
 
-        assert_equal(self.nodes[0].getbalance(), 60001)
+        assert_equal(self.nodes[0].getbalance(), 500000)
         assert_equal(self.nodes[1].getbalance(), 4250)
         assert_equal(self.nodes[2].getbalance(), 0)
 

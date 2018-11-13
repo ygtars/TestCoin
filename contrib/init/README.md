@@ -1,10 +1,10 @@
 Sample configuration files for:
 
-SystemD: testd.service
-Upstart: testd.conf
-OpenRC:  testd.openrc
-         testd.openrcconf
-CentOS:  testd.init
+SystemD: kydd.service
+Upstart: kydd.conf
+OpenRC:  kydd.openrc
+         kydd.openrcconf
+CentOS:  kydd.init
 
 have been made available to assist packagers in creating node packages here.
 

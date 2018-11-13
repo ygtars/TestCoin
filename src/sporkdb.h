@@ -1,9 +1,9 @@
-// Copyright (c) 2017 The test developers
+// Copyright (c) 2017 The PIVX developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef test_CSPORKDB_H
-#define test_CSPORKDB_H
+#ifndef BITCOINGREEN_CSPORKDB_H
+#define BITCOINGREEN_CSPORKDB_H
 
 #include <boost/filesystem/path.hpp>
 #include "leveldbwrapper.h"
@@ -25,4 +25,4 @@ public:
 };
 
 
-#endif //test_CSPORKDB_H
+#endif //BITCOINGREEN_CSPORKDB_H
