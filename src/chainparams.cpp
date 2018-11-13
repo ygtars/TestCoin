@@ -54,11 +54,11 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256("0x00000d672e3fbbd5a2d9892e48ea18a85a4bc2ec3450cdeae632017b5a39e1ba"));
+    (0, uint256("0000041e482b9b9691d98eefb48473405c0b8ec31b76df3797c74a78680ef818"));
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1521539113, // * UNIX timestamp of last checkpoint block
+    1525106065, // * UNIX timestamp of last checkpoint block
     0,          // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2000        // * estimated number of transactions per day after checkpoint
@@ -121,25 +121,25 @@ public:
 
          */
 
-        const char* pszTimestamp = "Don't work for weekends, work for our goals.";
+        const char* pszTimestamp = "U.S. News & World Report Jan 28 2016 With His Absence, Trump Dominates Another Debate";
         CMutableTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 486604799 << CScriptNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
         txNew.vout[0].nValue = 0 * COIN;
-        txNew.vout[0].scriptPubKey = CScript() << ParseHex("04f5a8143f86ad8ac63791fbbdb8e0b91a8da88c8c693a95f6c2c13c063ea790f7960b8025a9047a7bc671d5cfe707a2dd2e13b86182e1064a0eea7bf863636363") << OP_CHECKSIG;
+        txNew.vout[0].scriptPubKey = CScript() << ParseHex("04c10e83b2703ccf322f7dbd62dd5855ac7c10bd055814ce121ba32607d573b8810c02c0582aed05b4deb9c4b77b26d92428c61256cd42774babea0a073b2ed0c9") << OP_CHECKSIG;
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime = 1521539113;
+        genesis.nTime = 1454124731;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 516895;
+        genesis.nNonce = 2402015;
 
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x00000a560e5488e24c7b2d83a7fd1d707321d57d0b8aa8164f35c5e67ed3a0f0"));
-        assert(genesis.hashMerkleRoot == uint256("0xf5239467dd2a9dd0fce7a3babc03c7985eab2229c62e3d5670375f305753c9cc"));
+        assert(hashGenesisBlock == uint256("0x0000041e482b9b9691d98eefb48473405c0b8ec31b76df3797c74a78680ef818"));
+        assert(genesis.hashMerkleRoot == uint256("0x1b2ef6e2f28be914103a277377ae7729dcd125dfeb8bf97bd5964ba72b6dc39b"));
 
         // DNS Seeding
         //vSeeds.push_back(CDNSSeedData("", ""));
