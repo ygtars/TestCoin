@@ -135,10 +135,10 @@ public:
         genesis.nTime = 1542146482;
         genesis.nBits = 0x1e0ffff0;
         genesis.nNonce = 3263891;
-                         
+
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x00000ae27b19d6bce38e715b5e89b867e36fb2a3017438963f8555951793f209"));
+        assert(hashGenesisBlock == uint256("0x00000549c53063910944a75342e08a8ba07906d5932d5159b9d15231ffb035a8"));
         assert(genesis.hashMerkleRoot == uint256("0x5d6bedb3967f5db9036c199807dc5c6ed1d936e753d6135043a2e6bc31536202"));
 
         // DNS Seeding
