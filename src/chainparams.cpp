@@ -58,7 +58,7 @@ static Checkpoints::MapCheckpoints mapCheckpoints =
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1542152608, // * UNIX timestamp of last checkpoint block
+    1521539113, // * UNIX timestamp of last checkpoint block
     0,          // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2000        // * estimated number of transactions per day after checkpoint
@@ -121,7 +121,7 @@ public:
 
          */
 
-        const char* pszTimestamp = "Test";
+        const char* pszTimestamp = "Don't work for weekends, work for our goals.";
         CMutableTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -132,14 +132,14 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime = 1542152608;
+        genesis.nTime = 1521539113;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 3263891;
+        genesis.nNonce = 516895;
 
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x00000d672e3fbbd5a2d9892e48ea18a85a4bc2ec3450cdeae632017b5a39e1ba"));
-        assert(genesis.hashMerkleRoot == uint256("0x5d6bedb3967f5db9036c199807dc5c6ed1d936e753d6135043a2e6bc31536202"));
+        assert(hashGenesisBlock == uint256("0x00000a560e5488e24c7b2d83a7fd1d707321d57d0b8aa8164f35c5e67ed3a0f0"));
+        assert(genesis.hashMerkleRoot == uint256("0xf5239467dd2a9dd0fce7a3babc03c7985eab2229c62e3d5670375f305753c9cc"));
 
         // DNS Seeding
         //vSeeds.push_back(CDNSSeedData("", ""));
